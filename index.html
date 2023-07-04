@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <!-- bootstrap iconları -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- üst kısım -->
+    <header>
+        <!-- sol kısım -->
+        <div class="left">
+            <div class="menu">
+                <i class="bi bi-list"></i>
+            </div>
+            <img src="./assets/images/logo-24.png">
+            <span>Gmail</span>
+        </div>
+        <!-- orta kısım -->
+        <div class="middle">
+            <form class="flex">
+                <div class="icon">
+                    <i class="bi bi-search"></i>
+                </div>
+                <input type="text" placeholder="mail ara">
+            </form>
+        </div>
+        <!-- sag kısım -->
+        <div class="right">
+            <i class="bi bi-question-circle"></i>
+            <i class="bi bi-gear"></i>
+            <i class="bi bi-menu-button-wide-fill"></i>
+            <img src="./assets/images/man.jpg" alt="">
+        </div>
+    </header>
+
+    <!-- alt kısım -->
+    <section>
+        <!-- sol navigasyon -->
+        <nav>
+            <div class="create-mail">
+                <i class="bi bi-pencil-fill"></i>
+
+                <span>Oluştur</span>
+            </div>
+            <div class="middle">
+                <a class="active">
+                    <i class="bi bi-image"></i>
+                    <span>Gelen Kutusu</span>
+                </a>
+                <a href="">
+                    <i class="bi bi-star"></i>
+                    <span>Yıldızlı</span>
+                </a>
+                <a href="">
+                    <i class="bi bi-clock"></i>
+                    <span>Zamanlı</span>
+                </a>
+                <a href="">
+                    <i class="bi bi-arrow-right-circle"></i>
+                    <span>Gönderilenler</span>
+                </a>
+                <a href="">
+                    <i class="bi bi-file-earmark"></i>
+                    <span>Taslaklar</span>
+                </a>
+                <a href="">
+                    <i class="bi bi-arrow-down-short"></i>
+                    <span>Daha Fazla</span>
+                </a>
+            </div>
+            <div class="bottom">
+                <div>
+                    <span>Kategoriler</span>
+                    <i class="bi bi-plus-lg"></i>
+                </div>
+            </div>
+        </nav>
+        <!-- ana icerık -->
+        <main>
+            <div class="top">
+                <div class="left">
+                    <input type="checkbox">
+                    <i class="bi bi-arrow-clockwise"></i>
+                    <i class="bi bi-three-dots-vertical"></i>
+                </div>
+                <div class="right">
+                    <p>94 satırdan 1-50 arası</p>
+                    <i class="bi bi-arrow-left-short passive"></i>
+                    <i class="bi bi-arrow-right-short"></i>
+                </div>
+            </div>
+            <div class="mails-area">
+                <div class="mail">
+                    <div class="left">
+                        <input type="checkbox">
+                        <i class="bi bi-star"></i>
+                        <span>Trendyol</span>
+                    </div>
+                    <div class="right">
+                        <p class="message-title">İndirim Yağmuru</p>
+                        <p class="message-desc">Merhaba, Haziran indirimlerimiz başlıyor...</p>
+                        <p class="message-date">10 may</p>
+
+                
+                            <button id="delete">SİL</button>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </main>
+        <!-- sag yan ıcerik -->
+        <aside>
+            <img src="./assets/images/calendar-48.png" class="icon">
+            <img src="./assets/images/keep-48.png" class="icon">
+            <img src="./assets/images/task-48.png" class="icon">
+            <img src="./assets/images/account-48.png" class="icon">
+            <span></span>
+            <i class="bi bi-plus-lg icon"></i>
+        </aside>
+    </section>
+    
+
+
+
+    <!-- js baglantısı -->
+    <script src="script.js"></script>
+</body>
+</html>
