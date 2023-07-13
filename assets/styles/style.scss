@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import "modules";
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,237 +13,345 @@ $middle_gray: #e9ecef;
 $dark_gray: #495057;
 $light_blue: #d0ebff;
 
-body{
+body {
     font-family: 'Roboto';
     background: #dfe1e7;
 }
 
-header{
+header {
     @extend .flex;
     justify-content: space-between;
     gap: 20px;
     padding: 20px;
     font-size: 21px;
-    .left{
+
+    .left {
         display: flex;
         align-items: center;
         gap: 10px;
 
-        .menu{
+        .menu {
             font-size: 30px;
             @extend .icon;
             margin-right: 20px;
 
-            }
-        }
-        img,
-        span {
-
-            cursor: pointer;
-
         }
     }
-    .middle{
-        form {
-            background: rgb(222, 244, 244);
-           
-            padding: 6px 9px;
-            gap: 10px;
-            border-radius: 10px;
-            
-            input{
-                border: none;
-                outline: none;
-                font-size: 18px;
 
-                background: transparent;
+    img,
+    span {
 
-            }
-            
-        }
+        cursor: pointer;
 
-          
     }
-    
-    .right{
-        @extend .flex;
-        gap: 15px;
-        i{
-            @extend .icon;
-        }
-        img{
-            border-radius: 50%;
-            height: 36px;
+}
+
+.middle {
+    form {
+        background: rgb(222, 244, 244);
+
+        padding: 6px 9px;
+        gap: 10px;
+        border-radius: 10px;
+
+        input {
+            border: none;
+            outline: none;
+            font-size: 18px;
+
+            background: transparent;
+
         }
 
     }
 
-    section{
+
+}
+
+.right {
+    @extend .flex;
+    gap: 15px;
+
+    i {
+        @extend .icon;
+    }
+
+    img {
+        border-radius: 50%;
+        height: 36px;
+    }
+
+}
+
+section {
+    display: flex;
+    gap: 20px;
+}
+
+
+// navigasyon alanı
+
+nav {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 40px;
+
+    .create-mail {
+        background: $light_blue;
+        border-radius: 15px;
+        padding: 10px;
         display: flex;
         gap: 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+            box-shadow: 2px 2px 10px gray;
+            transition: all 0.4s;
+        }
     }
 
+    .middle {
+        display: grid;
+        font-size: 16px;
 
-    // navigasyon alanı
-
-    nav{
-        display: flex;
-        flex-direction: column;
-        padding: 12px;
-        gap: 40px;
-        .create-mail{
-            background: $light_blue;
-            border-radius: 15px;
-            padding: 10px;
-            display: flex;
-            gap: 20px;
-            cursor: pointer;
-            transition: all 0.3s;
-            &:hover{
-                box-shadow: 2px 2px 10px gray;
-                transition: all 0.4s;
-            }
+        .active {
+            font-weight: bold;
+            background: #c3e1f6;
+            border-radius: 0px 20px 20px 0px;
         }
-        .middle{
-            display: grid;
-            font-size: 16px;
-            .active{
-                font-weight: bold;
-                background: #c3e1f6;
+
+        a {
+            padding: 8px;
+            margin-left: 4px;
+            text-decoration: none;
+            display: flex;
+            gap: 12px;
+            cursor: pointer;
+
+            &:hover {
+                background: #e7f5ff;
                 border-radius: 0px 20px 20px 0px;
             }
-            a{
-                padding: 8px;
-                margin-left: 4px;
-                text-decoration: none;
-                display: flex;
-                gap: 12px;
-                cursor: pointer;
-                &:hover{
-                    background: #e7f5ff;
-                    border-radius: 0px 20px 20px 0px;
-                }
-            }
-        }
-        .bottom{
-            div{
-                display: flex;
-                justify-content: space-between;
-            }
         }
     }
 
-    // gizli navigasyon
-    .hide {
-        .create-mail span,
-        .middle a span,
-        .bottom div span{
-            display: none;
-        }
-    }
-
-    // ana icerik(mailler alanı)
-
-    main {
-        flex-grow: 1;
-
-        .top{
-            background-color: white;
-            border-radius: 10px 10px 0 0;
-            padding: 8px;
+    .bottom {
+        div {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            .left{
-                display: flex;
-                gap: 10px;
-                i{
-                    @extend .icon;
-                    width: 25px;
-                    height: 25px;
-                }
+        }
+    }
+}
+
+// gizli navigasyon
+.hide {
+
+    .create-mail span,
+    .middle a span,
+    .bottom div span {
+        display: none;
+    }
+}
+
+// ana icerik(mailler alanı)
+
+main {
+    flex-grow: 1;
+
+    .top {
+        background-color: white;
+        border-radius: 10px 10px 0 0;
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            display: flex;
+            gap: 10px;
+
+            i {
+                @extend .icon;
+                width: 25px;
+                height: 25px;
             }
-            .right{
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                .passive{
-                    color: gray;
-                    cursor: default;
-                }
-                i{
-                    @extend .icon;
-                    font-size: 19px;
-                    width: 25px;
-                    height: 25px;
-                }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .passive {
+                color: gray;
+                cursor: default;
             }
 
+            i {
+                @extend .icon;
+                font-size: 19px;
+                width: 25px;
+                height: 25px;
+            }
         }
-        .mails-area{
-            height: 80vh;
-            background: $middle_gray;
+
+    }
+
+    .mails-area {
+        height: 80vh;
+        background: $middle_gray;
+    }
+}
+
+
+// aside (yan icerik)
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+
+    span {
+        width: 100%;
+        height: 2px;
+        background: #a4aab0;
+
+    }
+
+}
+
+
+// mail icerigi
+.mail {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+
+    .left {
+        @extend .flex;
+        justify-content: start;
+        gap: 5px;
+    }
+
+    .right {
+        @extend .flex;
+        justify-content: space-between;
+        font-size: 17px;
+
+        .message-title {
+            font-weight: bold;
+        }
+
+        button {
+            background: none;
+            border: none;
+            font-size: 17px;
+            display: none;
+            padding: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background: #495057;
+                color: white;
+            }
         }
     }
 
+    // mause geldiginde tarihi gizledik
+    &:hover>.right .message-date {
+        display: none;
+    }
 
-    // aside (yan icerik)
+    // mause geldiginde butonu ortaya cıkardık
+    &:hover>.right button {
+        display: block;
+    }
+}
 
-    aside{
+
+
+
+
+// modal
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #49505739;
+    display: none;
+    place-items: center;
+
+}
+
+.modal-inner {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    padding: 40px;
+    position: relative;
+
+    #close-btn {
+        position: absolute;
+        right: 40px;
+        top: 30px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    form {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-        span{
+
+        label {
+            margin-top: 40px;
+        }
+
+        input,
+        textarea {
+            border: 1px solid gray;
+            border-radius: 4px;
+            margin-top: 10px;
+            padding: 8px;
+        }
+
+        textarea {
+            // textareanın hangi yonde genisleyecgını resize ozellıgı belırler
+            resize: vertical;
+            min-height: 300px;
+            max-height: 500px;
             width: 100%;
-            height: 2px;
-            background: #a4aab0;
-            
-        }
+            padding: 8px;
 
+        }
     }
 
+    #send-mail-btn {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        background: rgb(0, 68, 255);
+        color: white;
+        padding: 15px 30px;
+        border-radius: 20px;
+        font-size: 17px;
+        cursor: pointer;
+        transition: box-shadow 0.4s;
 
-    // mail icerigi
-    .mail{
-        display: grid;
-        grid-template-columns: 1fr 5fr;
-        gap: 10px;
-        font-size: 16px;
-        border-bottom: 1px solid gray;
-        padding: 10px;
-
-        .left{
-            @extend .flex;
-            justify-content: space-between;
-        }
-        .right{
-            @extend .flex;
-            justify-content: space-between;
-            font-size: 17px;
-            .message-title{
-                font-weight: bold;
-            }
-            button{
-                background: none;
-                border: none;
-                font-size: 17px;
-                display: none;
-                padding: 0 5px;
-                border-radius: 5px;
-                cursor: pointer;
-                &:hover{
-                    background: #495057;
-                    color: white;
-                }
-            }
-        }
-        // mause geldiginde tarihi gizledik
-        &:hover > .right .message-date{
-            display: none;
-        }
-        // mause geldiginde butonu ortaya cıkardık
-        &:hover > .right button{
-            display: block;
+        &:hover {
+            box-shadow: 0 0 20px rgb(0, 68, 255);
+            transition: all 0.4s;
         }
     }
+}
