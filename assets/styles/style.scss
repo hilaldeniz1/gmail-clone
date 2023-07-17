@@ -134,6 +134,10 @@ nav {
                 background: #e7f5ff;
                 border-radius: 0px 20px 20px 0px;
             }
+            i,span{
+                // tıklama olaylarını devre dısı bırakır
+                pointer-events: none;
+            }
         }
     }
 
@@ -230,8 +234,13 @@ aside {
     grid-template-columns: 1fr 5fr;
     gap: 10px;
     font-size: 16px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid ghostwhite;
     padding: 10px;
+    transition: box-shadow 0.3s;
+    &:hover{
+        box-shadow: 0 0 10px rgb(221, 221, 232);
+        transition: all 0.4s;
+    }
 
     .left {
         @extend .flex;
@@ -262,6 +271,10 @@ aside {
                 color: white;
             }
         }
+        .message-date{
+            white-space: nowrap;
+        }
+       
     }
 
     // mause geldiginde tarihi gizledik
@@ -275,7 +288,14 @@ aside {
     }
 }
 
+.star-active{
+    color: yellow !important;
+}
 
+.active-category{
+    background: #d0ebff;
+    border-radius: 15px;
+}
 
 
 
@@ -355,3 +375,5 @@ aside {
         }
     }
 }
+
+

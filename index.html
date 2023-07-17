@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/styles/style.css">
     <!-- bootstrap iconları -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- notifikasyon kutuphanesı css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
@@ -24,10 +26,10 @@
         <!-- orta kısım -->
         <div class="middle">
             <form class="flex">
-                <div class="icon">
+                <div class="icon" id="search-icon">
                     <i class="bi bi-search"></i>
                 </div>
-                <input type="text" placeholder="mail ara">
+                <input id="search-input" type="search" placeholder="mail ara">
             </form>
         </div>
         <!-- sag kısım -->
@@ -49,35 +51,13 @@
                 <span>Oluştur</span>
             </div>
             <div class="middle">
-                <a class="active">
-                    <i class="bi bi-image"></i>
-                    <span>Gelen Kutusu</span>
-                </a>
-                <a href="">
-                    <i class="bi bi-star"></i>
-                    <span>Yıldızlı</span>
-                </a>
-                <a href="">
-                    <i class="bi bi-clock"></i>
-                    <span>Zamanlı</span>
-                </a>
-                <a href="">
-                    <i class="bi bi-arrow-right-circle"></i>
-                    <span>Gönderilenler</span>
-                </a>
-                <a href="">
-                    <i class="bi bi-file-earmark"></i>
-                    <span>Taslaklar</span>
-                </a>
-                <a href="">
-                    <i class="bi bi-arrow-down-short"></i>
-                    <span>Daha Fazla</span>
-                </a>
+                <!-- buraya kategoriler gelecek -->
             </div>
             <div class="bottom">
                 <div>
-                    <span>Kategoriler</span>
                     <i class="bi bi-plus-lg"></i>
+                    <span>Kategoriler</span>
+                    
                 </div>
             </div>
         </nav>
@@ -147,10 +127,15 @@
     </div>
 
 
+ 
+
 
 
     <!-- js baglantısı -->
     <script src="script.js" type="module"></script>
+
+    <!-- notıfıkasyon kutuphanesı js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
