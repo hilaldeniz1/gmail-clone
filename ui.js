@@ -31,7 +31,7 @@ export function renderMails(outlet, data) {
                         <span>${mail.sender}</span>
                     </div>
                     <div class="right">
-                        <p class="message-title">${trimString(mail.title, 30)}</p>
+                        <p class="message-title">${trimString(mail.title, 80)}</p>
                         <p class="message-desc">${trimString(mail.message, 40)}</p>
                         <p class="message-date">${mail.date}</p>
 
