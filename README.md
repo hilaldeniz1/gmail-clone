@@ -10,6 +10,10 @@
 
 important mails are starred
 
+### 'Deploy'
+
+https://zippy-pavlova-cedbe8.netlify.app/
+
 ### 'Screen'
 
 ![](gmailscreen.gif)
